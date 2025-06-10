@@ -1,0 +1,139 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /*HTML e Body ocupem 100% da altura da viewport */
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5;
+    min-height: 100vh; 
+    padding: 20px; 
+    overflow-y: auto; /* Permite scroll se o conteúdo for maior que a tela */
+}
+
+.container-principal {
+    max-width: 420px; /* Largura máxima para o conteúdo */
+    width: 100%;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    margin: 30px auto;
+}
+
+.saldo-conta {
+    background-color: #3b82f6; 
+    border: none;
+    border-radius: 15px;
+    text-align: left; 
+    padding: 10px 20px;
+}
+
+/*Texto pequeno "saldo em conta" */
+.text-sm-custom {
+    font-size: 0.85rem; 
+    color: rgba(255, 255, 255, 0.8); 
+    margin-bottom: 5px;
+}
+
+/* Estilo para os botões de ação circulares */
+.action-button-circle-custom {
+    width: 55px; 
+    height: 55px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem; 
+    background-color: #3b82f6; /* Cor do botão */
+    border: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12); 
+    transition: all 0.3s ease;
+}
+
+.action-button-circle-custom:hover {
+    transform: translateY(-1px); /* Pequena elevação no hover */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.18);
+    background-color: #2563eb;
+}
+
+/* Texto dos itens */
+.action-text-custom {
+    font-size: 0.8rem;
+    color: #555;
+    font-weight: 500;
+}
+
+/* Itens da lista de atividades */
+.activity-list-custom .list-group-item {
+    border-color: #e9ecef; 
+    background-color: #fff;
+    padding: 12px 0; 
+}
+
+/* Círculos dos ícones das atividades */
+.activity-icon-circle-custom {
+    width: 40px; 
+    height: 40px; 
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem; /* Tamanho do ícone  */
+    flex-shrink: 0;
+}
+
+/* Texto da atividade */
+.activity-text-custom {
+    font-size: 0.9rem; 
+}
+
+/* Valor da atividade */
+.activity-amount-custom {
+    font-size: 0.95rem; 
+    font-weight: bold;
+}
+
+/* Cores de fundo para os ícones de atividade */
+.bg-info-light { background-color: #e0f7fa; }
+.text-info { color: #00bcd4 }
+
+.bg-success-light { background-color: #e8f5e9; }
+.text-success { color: #4CAF50 }
+
+.bg-purple-light { background-color: #f3e5f5; }
+.text-purple { color: #9c27b0 }
+
+/* Responsividade para telas menores */
+@media (max-width: 576px) {
+    body {
+        padding: 15px; /* Padding um pouco menor em telas muito pequenas */
+    }
+    .custom-container {
+        padding: 20px; 
+        margin: 20px auto; 
+    }
+    .balance-card-custom {
+        padding: 12px 15px; /* Padding ainda menor para o card de saldo*/
+    }
+    .balance-card-custom span {
+        font-size: 1.8rem; /* Tamanho do saldo ainda menor */
+    }
+    .action-button-circle-custom {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+    .action-text-custom {
+        font-size: 0.75rem;
+    }
+    .activity-icon-circle-custom {
+        width: 35px;
+        height: 35px;
+        font-size: 0.9rem;
+    }
+    .activity-text-custom, .activity-amount-custom {
+        font-size: 0.85rem;
+    }
+}
